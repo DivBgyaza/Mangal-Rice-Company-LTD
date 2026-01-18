@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Panel | Mangal Rice</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f7f6;
+      margin: 0;
+    }
+
+    header {
+      background: #1b5e20;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .box {
+      background: white;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    button {
+      background: #1b5e20;
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    button.logout {
+      width: 350px;
+      background: #b71c1c;
+      margin-top: 20px;
+    }
+
+    .logoutBtn{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 40px;
+    }
+
+    button:hover {
+      opacity: 0.9;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Admin Dashboard</h1>
+    <p>Mangal Rice Management Panel</p>
+  </header>
+
+  <div class="container">
+
+    <div class="grid">
+      <div class="box">
+        <h3>Order Management</h3>
+        <p>View and manage customer orders.</p>
+        <button onclick="alert('Orders feature')">View Orders</button>
+      </div>
+
+      <div class="box">
+        <h3>Payment Monitoring</h3>
+        <p>Track payment status.</p>
+        <button onclick="alert('Payments feature')">View Payments</button>
+      </div>
+
+      <div class="box">
+        <h3>Delivery Control</h3>
+        <p>Monitor delivery progress.</p>
+        <button onclick="alert('Delivery feature')">View Delivery</button>
+      </div>
+    </div>
+
+    <div class="logoutBtn">
+      <button class="logout" onclick="adminLogout()">Logout</button>
+    </div>
+  </div>
+
+  <script>
+    if (localStorage.getItem("isAdminLoggedIn") !== "true") {
+      window.location.href = "admin-login.html";
+    }
+
+    function adminLogout() {
+      localStorage.removeItem("isAdminLoggedIn");
+      window.location.href = "admin-login.html";
+    }
+  </script>
+
+</body>
+
+</html>

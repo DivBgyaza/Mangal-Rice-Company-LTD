@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<!-- saved from url=(0072)file:///C:/Users/USER/Desktop/school/softwares/mangal.hmtl.html#database -->
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mangal Rice | Online Rice Ordering System</title>
+
+  <style>
+    :root {
+      --primary: #1b5e20;
+      --secondary: #2e7d32;
+      --accent: #c8e6c9;
+      --light: #f5f7f6;
+      --dark: #1a1a1a;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--light);
+      color: var(--dark);
+      line-height: 1.6;
+    }
+
+    nav {
+      background-color: var(--primary);
+      padding: 15px;
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    header {
+      background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+        url('mangalonline.jpg') center/cover no-repeat;
+      color: #fff;
+      background-position: center;
+      background-size: cover;
+      padding: 100px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      letter-spacing: 2px;
+    }
+
+    header p {
+      max-width: 750px;
+      margin: 15px auto;
+      font-size: 1.2rem;
+    }
+
+    section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 60px 20px;
+    }
+
+    section h2 {
+      text-align: center;
+      color: var(--primary);
+      margin-bottom: 40px;
+      font-size: 2.2rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .box {
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    }
+
+    .products .box img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    button {
+      background-color: var(--primary);
+      color: #fff;
+      border: none;
+      padding: 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 600;
+      width: 100%;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background-color: var(--secondary);
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    input,
+    textarea,
+    select {
+      padding: 12px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+
+    .stats {
+      background-color: var(--primary);
+      color: #fff;
+      padding: 50px 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      text-align: center;
+      gap: 20px;
+    }
+
+    footer {
+      background-color: #0f3d16;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+    }
+
+    .note {
+      font-size: 0.9rem;
+      color: #555;
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <a href="file:///C:/Users/USER/Desktop/school/softwares/mangal.hmtl.html#home">Home</a>
+    <a href="file:///C:/Users/USER/Desktop/school/softwares/mangal.hmtl.html#about">About</a>
+    <a href="file:///C:/Users/USER/Desktop/school/softwares/mangal.hmtl.html#products">Products</a>
+    <a href="file:///C:/Users/USER/Desktop/school/softwares/mangal.hmtl.html#order">Order</a>
+    <a href="file:///C:/Users/USER/Desktop/school/softwares/mangal.hmtl.html#database">Database</a>
+    <a href="file:///C:/Users/USER/Desktop/school/softwares/mangal.hmtl.html#delivery">Delivery</a>
+    <a href="file:///C:/Users/USER/Desktop/school/softwares/mangal.hmtl.html#contact">Contact</a>
+    <a href="admin-login.html">Admin</a>
+
+  </nav>
+
+  <header id="home">
+    <h1>MANGAL RICE</h1>
+    <p>An Online Rice Ordering and Delivery System designed for efficient sales, secure payments, and reliable
+      distribution.</p>
+  </header>
+
+  <section id="about">
+    <h2>About the System</h2>
+    <div class="grid">
+      <div class="box">
+        <h3>System Overview</h3>
+        <p>This system allows customers to view rice products, place orders, make payments, and request home delivery
+          through a user-friendly web interface.</p>
+      </div>
+      <div class="box">
+        <h3>Objectives</h3>
+        <p>• Improve ordering efficiency<br>• Reduce manual sales errors<br>• Enhance customer satisfaction<br>• Support
+          business growth</p>
+      </div>
+      <div class="box">
+        <h3>Target Users</h3>
+        <p>Households, retailers, wholesalers, and company staff managing orders and deliveries.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="stats">
+    <div>
+      <h3>100%</h3>
+      <p>Online Ordering</p>
+    </div>
+    <div>
+      <h3>Secure</h3>
+      <p>Payment Simulation</p>
+    </div>
+    <div>
+      <h3>Fast</h3>
+      <p>Delivery Processing</p>
+    </div>
+  </div>
+
+  <section id="products" class="products">
+    <h2>Rice Products</h2>
+    <div class="grid">
+      <div class="box">
+        <img src="White rice.jpg">
+        <h3>Premium White Rice</h3>
+        <p>High-quality, stone-free long grain rice.</p>
+      </div>
+      <div class="box">
+        <img src="https://images.unsplash.com/photo-1586201375761-83865001e31c">
+        <h3>Brown Rice</h3>
+        <p>Healthy rice rich in fiber and nutrients.</p>
+      </div>
+      <div class="box">
+        <img src="local rice.jpg">
+        <h3>Local Rice</h3>
+        <p>Traditional taste with modern processing.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="order">
+    <h2>Place Order &amp; Payment</h2>
+    <form onsubmit="processOrder(event)">
+      <input type="text" id="fullName" placeholder="Full Name" required="">
+      <input type="email" id="email" placeholder="Email Address" required="">
+
+      <select id="product" required="">
+        <option value="">Select Product</option>
+        <option value="Premium White Rice">Premium White Rice</option>
+        <option value="Brown Rice">Brown Rice</option>
+        <option value="Local Rice">Local Rice</option>
+      </select>
+
+      <input type="number" id="quantity" placeholder="Quantity (kg)" min="1" required="">
+
+      <select id="region" required="" onchange="loadStates()">
+        <option value="">Select Region</option>
+        <option value="North">North</option>
+        <option value="South">South</option>
+        <option value="East">East</option>
+        <option value="West">West</option>
+      </select>
+
+      <select id="state" required="">
+        <option value="">Select State</option>
+      </select>
+
+      <select id="paymentMethod" required="" onchange="showPaymentFields()">
+        <option value="">Select Payment Method</option>
+        <option value="ATM Card">ATM Card</option>
+        <option value="Bank Transfer">Bank Transfer</option>
+        <option value="USSD">USSD (Local)</option>
+        <option value="Mobile Wallet">Mobile Wallet</option>
+      </select>
+
+      <input type="text" id="paymentRef" placeholder="Payment Reference / Card Last 4 Digits" required="">
+
+      <p class="note">* All payments are simulated.</p>
+      <button type="submit">Confirm Order</button>
+    </form>
+  </section>
+
+  <!-- ================= DATABASE ================= -->
+  <section id="database">
+    <h2>Database Design (Interactive)</h2>
+
+    <div class="grid">
+      <div class="box" onclick="openForm('users')">
+        <h3>Users Table</h3>
+        <p>UserID, Name, Email, Phone, Address</p>
+      </div>
+      <div class="box" onclick="openForm('products')">
+        <h3>Products Table</h3>
+        <p>ProductID, Name, Price </p>
+      </div>
+      <div class="box" onclick="openForm('orders')">
+        <h3>Orders Table</h3>
+        <p>OrderID, UserID, ProductID, Qty,</p>
+      </div>
+      <div class="box" onclick="openForm('delivery')">
+        <h3>Delivery Table</h3>
+        <p>DeliveryID, OrderID, Address,</p>
+      </div>
+    </div>
+
+    <div class="box" id="dbForm" style="display:none;margin-top:30px"></div>
+    <div class="box" id="dbTable" style="margin-top:30px"></div>
+  </section>
+
+
+  <section id="delivery">
+    <h2>Delivery System</h2>
+    <div class="grid">
+      <div class="box">
+        <h3>Order Processing</h3>
+        <p>Orders are verified, packaged, and assigned to delivery personnel.</p>
+      </div>
+      <div class="box">
+        <h3>Tracking</h3>
+        <p>Delivery status includes: Pending, In Transit, Delivered.</p>
+      </div>
+      <div class="box">
+        <h3>Coverage</h3>
+        <p>Local and regional delivery services supported.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Mangal Rice</h2>
+    <div class="grid">
+      <div class="box">
+        <h3>WhatsApp</h3>
+        <p>Chat with us directly for quick orders and enquiries.</p>
+        <a href="https://wa.me/2347037718954" target="_blank">
+          <button>Chat on WhatsApp</button>
+        </a>
+      </div>
+      <div class="box">
+        <h3>Email</h3>
+        <p>Send us an email for official communication.</p>
+        <p><strong>mangalrice@yahoo.com</strong></p>
+      </div>
+      <div class="box">
+        <h3>Instagram</h3>
+        <p>Follow us for updates and promotions.</p>
+        <a href="https://www.instagram.com/mangal_rice?igsh=MWhkdXl5cGNrZzFrZw==" target="_blank">
+          <button>Visit Instagram</button>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© Mangal Rice Official Website | @2026</p>
+  </footer>
+
+  <script>
+    const DB = { users: [], products: [], orders: [], delivery: [] };
+
+    function openForm(type) {
+      document.getElementById("dbForm").style.display = "block";
+      let h = "";
+      if (type === "users") h = `<h3>Add User</h3><form onsubmit="save('users',event)">
+<input required placeholder="User ID"><input required placeholder="Name">
+<input required placeholder="Email"><input required placeholder="Phone">
+<input required placeholder="Address"><button>Save</button></form>`;
+      if (type === "products") h = `<h3>Add Product</h3><form onsubmit="save('products',event)">
+<input required placeholder="Product ID"><input required placeholder="Name">
+<input required type="number" placeholder="Price">
+<button>Save</button></form>`;
+      if (type === "orders") h = `<h3>Add Order</h3><form onsubmit="save('orders',event)">
+<input required placeholder="Order ID"><input required placeholder="User ID">
+<input required placeholder="Product ID"><input required type="number" placeholder="Qty">
+<button>Save</button></form>`;
+      if (type === "delivery") h = `<h3>Add Delivery</h3><form onsubmit="save('delivery',event)">
+<input required placeholder="Delivery ID"><input required placeholder="Order ID">
+<input required placeholder="Address">
+<button>Save</button></form>`;
+      document.getElementById("dbForm").innerHTML = h;
+    }
+
+    function save(type, e) {
+      e.preventDefault();
+      const v = [...e.target.querySelectorAll("input")].map(i => i.value);
+      DB[type].push(v);
+      render(type);
+      e.target.reset();
+    }
+
+    function render(type) {
+      let titles = {
+        users: ["UserID", "Name", "Email", "Phone", "Address"],
+        products: ["ProductID", "Name", "Price", "Stock"],
+        orders: ["OrderID", "UserID", "ProductID", "Qty", "Status"],
+        delivery: ["DeliveryID", "OrderID", "Address", "Status"]
+      };
+      let h = `<h3>${type.toUpperCase()} RECORDS</h3><table><tr>`;
+      titles[type].forEach(t => h += `<th>${t}</th>`); h += "</tr>";
+      DB[type].forEach(r => { h += "<tr>"; r.forEach(c => h += `<td>${c}</td>`); h += "</tr>"; });
+      h += "</table>";
+      document.getElementById("dbTable").innerHTML = h;
+    }
+
+    function processOrder(e) { e.preventDefault(); alert("Order Submitted Successfully"); }
+    let currentOrder = {};
+
+
+    const statesByRegion = {
+      North: ['FCT(Abuja)', 'Adamawa', 'Baushi', 'Benue', 'Barno', 'Gombe', 'Jigawa', 'Kaduna',
+        'Kano', 'Katsina', 'Kebbi', 'Kogi', 'Kwara', 'Nasarawa', 'Niger', 'Plateau', 'Sokoto', 'Taraba', 'Yobe', 'Zamfara'],
+      South: ['Akwa Ibom', 'Bayelsa', 'Cross River', 'Delta', 'Edo', 'Rivers'],
+      East: ['Abia', 'Anambra', 'Ebonyi', 'Enugu', 'Imo'],
+      West: ['Ekiti', 'Lagos', 'Ogun', 'Ondo', 'Osun', 'Oyo']
+    };
+
+    function loadStates() {
+      const region = document.getElementById('region').value;
+      const stateSelect = document.getElementById('state');
+      stateSelect.innerHTML = '<option value="">Select State</option>';
+
+      if (statesByRegion[region]) {
+        statesByRegion[region].forEach(state => {
+          const option = document.createElement('option');
+          option.value = state;
+          option.textContent = state;
+          stateSelect.appendChild(option);
+        });
+      }
+    }
+  </script>
+</body>
+
+</html>
